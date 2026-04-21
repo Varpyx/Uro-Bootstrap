@@ -1,0 +1,50 @@
+/* Plynulý přechod barvy pro celé tělo stránky */
+body { transition: background-color 0.8s ease; }
+
+/* Třídy, které bude přepínat JavaScript */
+body.bg-dark-mode { background-color: #121212 !important; color: white; }
+body.bg-light-mode { background-color: #ffffff !important; color: black; }
+
+/* Zajištění, aby každá sekce zabrala celou výšku obrazovky */
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: transparent !important;
+}
+
+/* Pozicování teček na bok */
+.dot-nav {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Základní vzhled tečky */
+.dot-link {
+    width: 12px;
+    height: 12px;
+    background-color: #6c757d; /* Šedá v základu */
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+/* Vzhled aktivní (větší) tečky */
+.dot-link.active {
+    background-color: #0d6efd; /* Modrá */
+    transform: scale(1.6); /* Zvětšení o 60 % */
+    border-color: rgba(13, 110, 253, 0.3);
+}
+
+/* Efekt při najetí myší */
+.dot-link:hover {
+    background-color: #0d6efd;
+    transform: scale(1.3);
+}
