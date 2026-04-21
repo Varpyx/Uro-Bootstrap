@@ -7,6 +7,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body class="bg-light-mode">
@@ -20,7 +21,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">🚀 Moje Portfolio</a>
+            <a class="navbar-brand fw-bold" href="#">Michal Poncza - Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,40 +40,262 @@
     <section id="o-mne" data-bg="light" class="pt-5">
         <div class="container mt-5">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                
+                <div class="col-lg-6 reveal">
                     <span class="text-primary fw-bold text-uppercase tracking-wide">Vítejte na mém webu</span>
-                    <h1 class="display-4 fw-bold mt-2">Ahoj, já jsem <br><span class="text-primary">Tvůrce Webu</span></h1>
+                    
+                    <h1 class="display-4 fw-bold mt-2">
+                        Ahoj, já jsem <br>
+                        <span class="text-primary" id="typewriter"></span><span class="cursor"></span>
+                    </h1>
+                    
                     <p class="lead text-muted mt-3 mb-4">
-                        Jsem začínající vývojář a tohle je můj závěrečný projekt. Baví mě tvořit moderní, responzivní a vizuálně poutavé webové stránky, které dávají smysl.
+                        Jsem nadšený student Informatiky, který rád vyvíjí software, co dáva smysl. Tohle je moje první stránka vytvořená pomocí Bootstrapu, kde najdete mé dovednosti a projekty. V případě zájmu mě neváhejte kontaktovat!
                     </p>
                     <a href="#projekty" class="btn btn-primary btn-lg shadow">Ukázat mé práce</a>
                     <a href="#kontakt" class="btn btn-outline-secondary btn-lg ms-2">Napište mi</a>
                 </div>
-                <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <img src="https://via.placeholder.com/500x500/0d6efd/ffffff?text=Moje+Fotka" alt="Moje fotka" class="img-fluid rounded-4 shadow-lg">
+
+                <div class="col-lg-6 text-center mt-5 mt-lg-0 reveal">
+                <div class="profile-pic-wrapper mx-auto shadow-lg rounded-circle overflow-hidden">
+                    <img src="brno_lol.jpg" alt="Moje fotka">
                 </div>
+            </div>
+
             </div>
         </div>
     </section>
 
     <section id="technologie" data-bg="dark">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-4">Moje Technologie</h2>
-            <p class="lead">Tady už za chvíli přidáme parádní progress bary!</p>
+        <div class="container mt-5">
+            <div class="text-center mb-5 reveal">
+                <h2 class="display-5 fw-bold scroll-type" data-text="Moje Technologie"></h2>
+                <div class="mt-2" style="height: 3px; width: 60px; background-color: #0d6efd; margin: 0 auto;"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 reveal">
+                    <div class="tech-card hover-lift">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" style="width: 24px; height: 24px;">
+                                <span class="fw-bold">Python</span>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 reveal">
+                    <div class="tech-card hover-lift">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C/C++" style="width: 24px; height: 24px;">
+                                <span class="fw-bold">C/C++</span>
+                            </div>
+                            <span>70%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 reveal">
+                    <div class="tech-card hover-lift">
+                        <div class="d-flex justify-content-between mb-2">
+                           <div class="d-flex align-items-center gap-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" style="width: 24px; height: 24px;">
+                                <span class="fw-bold">Java</span>
+                            </div>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 reveal">
+                    <div class="tech-card hover-lift">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" style="width: 24px; height: 24px;">
+                                <span class="fw-bold">Git</span>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 reveal">
+                    <div class="tech-card hover-lift">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" alt="Databases (Oracle)" style="width: 24px; height: 24px;">
+                                <span class="fw-bold">Databases (Oracle)</span>
+                            </div>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 reveal">
+                    <div class="tech-card hover-lift">
+                        <div class="d-flex justify-content-between mb-2">
+                            
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Ui/Ux design" style="width: 24px; height: 24px;">
+                                <span class="fw-bold">UI/UX design</span>
+                            </div>
+
+                            <span>55%</span>
+                            
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 55%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="projekty" data-bg="light">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-4">Ukázkové Projekty</h2>
-            <p class="lead">Zde připravíme mřížku s tvou prací.</p>
+    <section id="projekty" data-bg="light" class="py-5">
+        <div class="container mt-5">
+            
+            <div class="text-center mb-5 reveal">
+                <h2 class="display-5 fw-bold scroll-type" data-text="Ukázkové Projekty"></h2>
+                <div class="mt-2" style="height: 3px; width: 60px; background-color: #0d6efd; margin: 0 auto;"></div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                
+                <div class="col-md-4 reveal">
+                    <div class="card h-100 border-0 shadow hover-lift rounded-4 overflow-hidden">
+                        <img src="https://picsum.photos/id/119/600/400" class="card-img-top" alt="Náhled projektu 1">
+                        
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold">Osobní Portfolio</h5>
+                            <p class="card-text text-muted mb-4">
+                                Moderní responzivní web vytvořený pomocí HTML, CSS a Bootstrap 5. Obsahuje dynamické animace a tmavý režim.
+                            </p>
+                            <a href="https://github.com/Varpyx/Uro-Bootstrap.git" target="_blank" class="btn btn-dark mt-auto rounded-pill fw-bold">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" style="width: 20px; margin-right: 8px; filter: invert(1);">
+                                Zobrazit na GitHubu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 reveal">
+                    <div class="card h-100 border-0 shadow hover-lift rounded-4 overflow-hidden">
+                        <img src="https://picsum.photos/id/1/600/400" class="card-img-top" alt="Náhled projektu 2">
+                        
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold">S3 storage like project</h5>
+                            <p class="card-text text-muted mb-4">
+                                Aplikace vytvořená v rámci předmětu SKJ.
+                                <br><br>
+                                Celý projekt je napsaný s pomocí AI a dvou kolegů.
+                            </p>
+                            <a href="https://github.com/Varpyx/SKJ_project.git" target="_blank" class="btn btn-dark mt-auto rounded-pill fw-bold">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" style="width: 20px; margin-right: 8px; filter: invert(1);">
+                                Zobrazit na GitHubu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 reveal">
+                    <div class="card h-100 border-0 shadow hover-lift rounded-4 overflow-hidden">
+                        <img src="https://picsum.photos/id/36/600/400" class="card-img-top" alt="Náhled projektu 3">
+                        
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold">Exercise Recognition</h5>
+                            <p class="card-text text-muted mb-4">
+                                Projekt zaměřený na detekci a rozpoznávání cviků. 
+                                <br><br>
+                                Program rozpozná cviky, kontroluje správnost provedení a počítá opakování.
+                            </p>
+                            <a href="https://github.com/Varpyx/Exercise_recognition.git" target="_blank" class="btn btn-dark mt-auto rounded-pill fw-bold">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" style="width: 20px; margin-right: 8px; filter: invert(1);">
+                                Zobrazit na GitHubu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <section id="kontakt" data-bg="dark">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-4">Napište mi</h2>
-            <p class="lead">Sem vložíme kontaktní formulář.</p>
+    <section id="kontakt" data-bg="dark" class="py-5">
+        <div class="container mt-5">
+            
+            <div class="text-center mb-5 reveal">
+                <h2 class="display-5 fw-bold scroll-type" data-text="Napište mi"></h2>
+                <div class="mt-2" style="height: 3px; width: 60px; background-color: #0d6efd; margin: 0 auto;"></div>
+            </div>
+
+            <div class="row g-5 mt-4 justify-content-between">
+                
+                <div class="col-lg-5 reveal">
+                    <h3 class="fw-bold mb-4">Pojďme něco vytvořit!</h3>
+                    <p class="text-white-60 mb-4 lead">
+                        Hledáte někoho na vytvoření webu, nebo jiné projekty? Neváhejte se mi ozvat. Jsem otevřený novým výzvám.
+                    </p>
+                    
+                    <ul class="list-unstyled mt-5">
+                        <li class="mb-4 d-flex align-items-center gap-3">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex justify-content-center align-items-center" style="width: 50px; height: 50px; font-size: 1.5rem;">
+                                📧
+                            </div>
+                            <span class="fs-5">prihlasmetam@seznam.cz</span>
+                        </li>
+                        <li class="mb-4 d-flex align-items-center gap-3">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex justify-content-center align-items-center" style="width: 50px; height: 50px; font-size: 1.5rem;">
+                                📍
+                            </div>
+                            <span class="fs-5">Ostrava, Česká republika</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 reveal" data-bs-theme="dark">
+                    <form action="https://formspree.io/f/TVOJE_ID_ZDE" method="POST" class="p-4 p-md-5 rounded-4 shadow-lg border border-secondary border-opacity-25" style="background-color: #1e1e24;">
+                        
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="nameInput" name="name" placeholder="Jan Novák" required>
+                            <label for="nameInput" class="text-muted">Vaše jméno</label>
+                        </div>
+                        
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="emailInput" name="email" placeholder="name@example.com" required>
+                            <label for="emailInput" class="text-muted">E-mailová adresa</label>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control" placeholder="Napište mi zprávu" id="messageInput" name="message" style="height: 150px" required></textarea>
+                            <label for="messageInput" class="text-muted">Vaše zpráva</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold hover-lift">
+                            Odeslat zprávu 🚀
+                        </button>
+                    </form>
+                </div>
+
+            </div>
         </div>
     </section>
 
