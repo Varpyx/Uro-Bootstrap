@@ -1,19 +1,16 @@
-/* Plynulý přechod barvy pro celé tělo stránky */
 body { transition: background-color 0.8s ease; }
 
-/* Třídy, které bude přepínat JavaScript */
 body.bg-dark-mode { background-color: #1a1a24 !important; color: #f8f9fa; }
 
-/* Světlý režim: místo čisté bílé dáme velmi jemnou šedou a text bude tmavě šedý */
 body.bg-light-mode { background-color: #f8f9fa !important; color: #212529; }
 
 /* --- FADE-IN EFEKT (Vyjíždění) --- */
 .reveal {
     opacity: 0;
-    transform: translateY(40px); /* Prvek je posunutý o 40px dolů */
-    transition: all 0.8s ease-out; /* Plynulost animace */
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
 }
-/* Jakmile JavaScript přidá třídu 'active', prvek zviditelní a vyjede na své místo */
+
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
@@ -24,17 +21,16 @@ body.bg-light-mode { background-color: #f8f9fa !important; color: #212529; }
 .cursor {
     display: inline-block;
     width: 3px;
-    background-color: #0d6efd; /* Modrá barva jako Bootstrap primary */
+    background-color: #0d6efd; 
     margin-left: 4px;
     animation: blink 1s infinite;
 }
-/* Animace pro blikání kurzoru */
+
 @keyframes blink { 
     0%, 100% { opacity: 1; } 
     50% { opacity: 0; } 
 }
 
-/* Zajištění, aby každá sekce zabrala celou výšku obrazovky */
 section {
     min-height: 100vh;
     display: flex;
@@ -44,7 +40,6 @@ section {
     z-index: 1;
 }
 
-/* Pozicování teček na bok */
 .dot-nav {
     position: fixed;
     top: 50%;
@@ -56,81 +51,49 @@ section {
     gap: 20px;
 }
 
-/* Základní vzhled tečky */
 .dot-link {
     width: 12px;
     height: 12px;
-    background-color: #6c757d; /* Šedá v základu */
+    background-color: #6c757d;
     border-radius: 50%;
     transition: all 0.4s ease;
     text-decoration: none;
     border: 2px solid transparent;
 }
 
-/* Vzhled aktivní (větší) tečky */
 .dot-link.active {
-    background-color: #0d6efd; /* Modrá */
-    transform: scale(1.6); /* Zvětšení o 60 % */
+    background-color: #0d6efd; 
+    transform: scale(1.6);
     border-color: rgba(13, 110, 253, 0.3);
 }
 
-/* Efekt při najetí myší */
 .dot-link:hover {
     background-color: #0d6efd;
     transform: scale(1.3);
 }
 
-/* --- LEVITUJÍCÍ EFEKT (Hover Lift) --- */
 .hover-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
-    transform: translateY(-10px); /* Karta povyjede o 10px nahoru */
-    /* Přidáme výraznější stín, aby to vypadalo 3D */
+    transform: translateY(-10px); 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important; 
 }
 
-/* Jemné doladění vzhledu karet pro progress bary */
 .tech-card {
-    background-color: rgba(128, 128, 128, 0.1); /* Lehce průhledná šedá */
+    background-color: rgba(128, 128, 128, 0.1);
     border-radius: 1rem;
     padding: 1.5rem;
 }
 
-/* --- OBRÁZEK V KRUHU --- */
 .profile-pic-wrapper {
-    width: 350px; /* Nastav si požadovanou velikost kruhu */
-    height: 350px; /* Musí být stejná jako šířka */
+    width: 350px; 
+    height: 350px; 
 }
 
 .profile-pic-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Zajistí vycentrování a oříznutí i nečtvercových obrázků */
-}
-
-.navbar {
-    z-index: 2000;
-}
-
-.navbar-collapse {
-    background-color: inherit;
-}
-
-@media (max-width: 991px) {
-    .navbar-collapse {
-        background-color: var(--bs-navbar-bg, #f8f9fa);
-        padding: 1rem;
-        border-radius: 0 0 0.5rem 0.5rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    body.bg-dark-mode .navbar-collapse {
-        background-color: #212529;
-    }
-}
-
-.navbar-toggler {
-    position: relative;
-    z-index: 2002;
+    object-fit: cover;
 }
