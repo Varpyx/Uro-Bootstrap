@@ -1,5 +1,5 @@
 const navBar = document.getElementById('mainNav');
-const dotLinks = document.querySelectorAll('.dot-link'); // Najdeme všechny tečky
+const dotLinks = document.querySelectorAll('.dot-link');
 
 const observerOptions = { threshold: 0.6 };
 
@@ -9,7 +9,7 @@ const scrollObserver = new IntersectionObserver((entries) => {
             const theme = entry.target.getAttribute('data-bg');
             const sectionId = entry.target.getAttribute('id');
             
-            // 1. Změna barvy pozadí a menu (to už máš)
+            // 1. Změna barvy pozadí a menu
             if (theme === 'dark') {
                 document.body.classList.add('bg-dark-mode');
                 document.body.classList.remove('bg-light-mode');
@@ -22,7 +22,7 @@ const scrollObserver = new IntersectionObserver((entries) => {
                 navBar.classList.replace('bg-dark', 'bg-light');
             }
 
-            // 2. AKTIVACE TEČEK: Odstraníme 'active' ze všech a dáme ji té správné
+            // 2. vybrání aktivní tečky v menu
             dotLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${sectionId}`) {
@@ -37,7 +37,7 @@ document.querySelectorAll('section').forEach(section => {
     scrollObserver.observe(section);
 });
 
-// --- 1. ODHALOVÁNÍ PRVKŮ (Opakované) ---
+// Odhalování elementu
 const revealElements = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -45,8 +45,6 @@ const revealObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
         } else {
-            // PŘIDÁNO: Jakmile prvek zmizí z obrazovky, sebereme mu třídu active.
-            // Až k němu scroluješ znovu, animace proběhne nanovo.
             entry.target.classList.remove('active');
         }
     });
@@ -55,15 +53,15 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(el => revealObserver.observe(el));
 
 
-// --- 2. EFEKT PSACÍHO STROJE ---
-const words = ["Programátor", "AI nadšenec", "Student Informatiky"]; // Slova, co se budou střídat
+// prepisovani uvodniho slova
+const words = ["Programátor", "AI nadšenec", "Student Informatiky"]; 
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 const typeTarget = document.getElementById("typewriter");
 
 function typeEffect() {
-    if (!typeTarget) return; // Pojistka
+    if (!typeTarget) return;
 
     const currentWord = words[wordIndex];
     
@@ -75,24 +73,23 @@ function typeEffect() {
         charIndex++;
     }
 
-    // Rychlost psaní vs. mazání
     let typeSpeed = isDeleting ? 50 : 100;
 
     if (!isDeleting && charIndex === currentWord.length) {
-        typeSpeed = 2000; // Jak dlouho slovo zůstane napsané, než se začne mazat
+        typeSpeed = 2000;
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length; // Posun na další slovo
-        typeSpeed = 500; // Pauza před začátkem psaní nového slova
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 500;
     }
 
     setTimeout(typeEffect, typeSpeed);
 }
 
-typeEffect(); // Spuštění psacího stroje
+typeEffect(); 
 
-// --- 3. VYPISOVÁNÍ NADPISŮ PŘI SCROLLOVÁNÍ (Opakované) ---
+// vypsiovani nadpisu sekci
 const scrollTypeElements = document.querySelectorAll('.scroll-type');
 
 const typeObserver = new IntersectionObserver((entries) => {
@@ -101,10 +98,9 @@ const typeObserver = new IntersectionObserver((entries) => {
             if (!entry.target.classList.contains('typed')) {
                 entry.target.classList.add('typed');
                 const textToType = entry.target.getAttribute('data-text');
-                entry.target.textContent = ''; // Vymažeme aktuální text
+                entry.target.textContent = '';
                 
                 let i = 0;
-                // Uložíme interval, abychom ho mohli zastavit
                 const typingInterval = setInterval(() => {
                     if (i < textToType.length) {
                         entry.target.textContent += textToType.charAt(i);
@@ -116,10 +112,9 @@ const typeObserver = new IntersectionObserver((entries) => {
                 entry.target.dataset.intervalId = typingInterval;
             }
         } else {
-            // PŘIDÁNO: Reset celého psacího stroje při odscrolování
             entry.target.classList.remove('typed');
-            entry.target.textContent = ''; // Smaže text, aby se mohl napsat znovu
-            clearInterval(entry.target.dataset.intervalId); // Zastaví případné nedopsané psaní
+            entry.target.textContent = '';
+            clearInterval(entry.target.dataset.intervalId);
         }
     });
 }, { threshold: 0.5 });

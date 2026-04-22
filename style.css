@@ -40,6 +40,8 @@ section {
     display: flex;
     align-items: center;
     background: transparent !important;
+    position: relative;
+    z-index: 1;
 }
 
 /* Pozicování teček na bok */
@@ -98,12 +100,37 @@ section {
 
 /* --- OBRÁZEK V KRUHU --- */
 .profile-pic-wrapper {
-    width: 250px; /* Nastav si požadovanou velikost kruhu */
-    height: 250px; /* Musí být stejná jako šířka */
+    width: 350px; /* Nastav si požadovanou velikost kruhu */
+    height: 350px; /* Musí být stejná jako šířka */
 }
 
 .profile-pic-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Zajistí vycentrování a oříznutí i nečtvercových obrázků */
+}
+
+.navbar {
+    z-index: 2000;
+}
+
+.navbar-collapse {
+    background-color: inherit;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--bs-navbar-bg, #f8f9fa);
+        padding: 1rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    body.bg-dark-mode .navbar-collapse {
+        background-color: #212529;
+    }
+}
+
+.navbar-toggler {
+    position: relative;
+    z-index: 2002;
 }
